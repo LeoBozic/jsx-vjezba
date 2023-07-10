@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
+  const string1 = "Ovo je string";
+  const string2 = "Ovo je drugi string";
+
+  function odvojiZarezom(a, b) {
+    return `${a}, ${b}`;
+  }
+
+  function randomBroj() {
+    return Math.floor(Math.random() * 10 + 1);
+  }
+
+  function dvaRandomBroja() {
+    return `${randomBroj()}, ${randomBroj()}`;
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Ovo je naslov</h2>
+      <h4>Ovo je string: {string1}</h4>
+      <h4>
+        Dvije varijable odvojene zarezom: {odvojiZarezom(string1, string2)}
+      </h4>
+      <h4>Ovo su dva random broja odvojena zarezom: {dvaRandomBroja()}</h4>
     </div>
   );
 }
